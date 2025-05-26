@@ -17,6 +17,7 @@
     width: 100%;
     max-width: 1400px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .dashboard-left-column,
@@ -25,6 +26,7 @@
     flex-direction: column;
     gap: 1.5rem;
     width: 100%;
+    box-sizing: border-box;
 }
 
 .anatomy-section-container {
@@ -34,6 +36,7 @@
     border-radius: 30px;
     height: 577px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 /* Calendar section specific styles */
@@ -42,12 +45,14 @@
     max-width: 500px;
     overflow-x: auto;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .schedule-section {
     width: 100%;
     max-width: 500px;
     margin: 0 auto;
+    box-sizing: border-box;
 }
 
 /* Responsive styles */
@@ -118,6 +123,7 @@
         margin-right: 0;
         padding: 1rem;
         width: 100%;
+        overflow-x: hidden;
     }
 
     .dashboard-grid {
@@ -125,22 +131,22 @@
         flex-direction: column;
         gap: 1rem;
         max-width: 100%;
+        overflow-x: hidden;
     }
 
     .dashboard-left-column,
     .dashboard-right-column {
         gap: 1rem;
-    }
-
-    .calendar-section,
-    .schedule-section {
-        max-width: 100%;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     .anatomy-section-container {
         flex-direction: column;
         height: auto;
         gap: 1rem;
+        width: 100%;
+        overflow-x: hidden;
     }
 
     /* Reorder components for mobile */
@@ -159,17 +165,110 @@
     .calendar-section {
         order: 4;
         width: 100%;
-        overflow-x: auto;
+        max-width: 100%;
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
     }
 
     .schedule-section {
         order: 5;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        overflow-x: hidden;
     }
 }
 
 @media (max-width: 480px) {
     .main-content {
         padding: 0.5rem;
+        overflow-x: hidden;
+    }
+
+    .dashboard-grid {
+        gap: 0.5rem;
+        overflow-x: hidden;
+    }
+
+    .dashboard-left-column,
+    .dashboard-right-column {
+        gap: 0.5rem;
+        overflow-x: hidden;
+    }
+
+    .anatomy-section-container {
+        gap: 0.5rem;
+        overflow-x: hidden;
+    }
+
+    .calendar-section {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .schedule-section {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
+
+@media (max-width: 320px) {
+    .main-content {
+        padding: 0.15rem;
+        margin: 0;
+        width: 100%;
+    }
+
+    .dashboard-grid {
+        gap: 0.15rem;
+        padding: 0;
+    }
+
+    .dashboard-left-column,
+    .dashboard-right-column {
+        gap: 0.15rem;
+        padding: 0;
+    }
+
+    .anatomy-section-container {
+        gap: 0.15rem;
+        height: auto;
+        min-height: 200px;
+    }
+
+    .calendar-section,
+    .schedule-section {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Force all sections to be full width */
+    .health-status-section,
+    .anatomy-section,
+    .activity-section,
+    .calendar-section,
+    .schedule-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0.15rem !important;
+    }
+}
+
+/* Phone breakpoints */
+/* Large phones (428px and up) */
+@media (max-width: 428px) {
+    .main-content {
+        padding: 0.75rem;
+        margin: 0;
+        width: 100%;
     }
 
     .dashboard-grid {
@@ -185,8 +284,81 @@
         gap: 0.75rem;
     }
 
-    .calendar-section {
-        margin: 0 -0.5rem;
-        padding: 0 0.5rem;
+    .calendar-section,
+    .schedule-section {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Medium phones (390px and up) */
+@media (max-width: 390px) {
+    .main-content {
+        padding: 0.5rem;
+    }
+
+    .dashboard-grid {
+        gap: 0.5rem;
+    }
+
+    .dashboard-left-column,
+    .dashboard-right-column {
+        gap: 0.5rem;
+    }
+
+    .anatomy-section-container {
+        gap: 0.5rem;
+    }
+}
+
+/* Small phones (360px and up) */
+@media (max-width: 360px) {
+    .main-content {
+        padding: 0.4rem;
+    }
+
+    .dashboard-grid {
+        gap: 0.4rem;
+    }
+
+    .dashboard-left-column,
+    .dashboard-right-column {
+        gap: 0.4rem;
+    }
+
+    .anatomy-section-container {
+        gap: 0.4rem;
+    }
+}
+
+/* Extra small phones (320px and up) */
+@media (max-width: 320px) {
+    .main-content {
+        padding: 0.35rem;
+    }
+
+    .dashboard-grid {
+        gap: 0.35rem;
+    }
+
+    .dashboard-left-column,
+    .dashboard-right-column {
+        gap: 0.35rem;
+    }
+
+    .anatomy-section-container {
+        gap: 0.35rem;
+    }
+
+    /* Force all sections to be full width */
+    .health-status-section,
+    .anatomy-section,
+    .activity-section,
+    .calendar-section,
+    .schedule-section {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0.35rem !important;
     }
 }
