@@ -9,7 +9,7 @@ const healthData = [
     icon: '🫁',
     value: 80,
     color: '#e45757',
-    date: '26 Okt 2021',
+    date: '26 Oct 2021',
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const healthData = [
     icon: '🦷',
     value: 60,
     color: '#43aa8b',
-    date: '26 Okt 2021',
+    date: '26 Oct 2021',
   },
   {
     id: 3,
@@ -25,7 +25,7 @@ const healthData = [
     icon: '🦴',
     value: 40,
     color: '#e45757',
-    date: '26 Okt 2021',
+    date: '26 Oct 2021',
   },
 ];
 
