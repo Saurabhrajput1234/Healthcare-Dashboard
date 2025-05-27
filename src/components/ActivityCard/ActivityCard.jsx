@@ -1,7 +1,7 @@
 import './ActivityCard.css';
 
 const days = ['Mon', 'Tues', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
-// Each day: [gray, cyan, purple] heights
+
 const barData = [
   [38, 60, 48],
   [55, 32, 44],

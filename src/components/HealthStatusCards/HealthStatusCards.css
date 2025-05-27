@@ -187,7 +187,6 @@
   display: none !important;
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
   .cards-grid {
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));

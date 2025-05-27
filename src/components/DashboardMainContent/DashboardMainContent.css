@@ -39,7 +39,6 @@
     box-sizing: border-box;
 }
 
-/* Calendar section specific styles */
 .calendar-section {
     width: 100%;
     max-width: 500px;
@@ -55,7 +54,6 @@
     box-sizing: border-box;
 }
 
-/* Responsive styles */
 @media (max-width: 1400px) {
     .dashboard-grid {
         max-width: 1200px;
@@ -149,7 +147,6 @@
         overflow-x: hidden;
     }
 
-    /* Reorder components for mobile */
     .health-status-section {
         order: 1;
     }
@@ -249,7 +246,6 @@
         max-width: 100%;
     }
 
-    /* Force all sections to be full width */
     .health-status-section,
     .anatomy-section,
     .activity-section,
@@ -259,106 +255,5 @@
         max-width: 100% !important;
         margin: 0 !important;
         padding: 0.15rem !important;
-    }
-}
-
-/* Phone breakpoints */
-/* Large phones (428px and up) */
-@media (max-width: 428px) {
-    .main-content {
-        padding: 0.75rem;
-        margin: 0;
-        width: 100%;
-    }
-
-    .dashboard-grid {
-        gap: 0.75rem;
-    }
-
-    .dashboard-left-column,
-    .dashboard-right-column {
-        gap: 0.75rem;
-    }
-
-    .anatomy-section-container {
-        gap: 0.75rem;
-    }
-
-    .calendar-section,
-    .schedule-section {
-        width: 100%;
-        max-width: 100%;
-    }
-}
-
-/* Medium phones (390px and up) */
-@media (max-width: 390px) {
-    .main-content {
-        padding: 0.5rem;
-    }
-
-    .dashboard-grid {
-        gap: 0.5rem;
-    }
-
-    .dashboard-left-column,
-    .dashboard-right-column {
-        gap: 0.5rem;
-    }
-
-    .anatomy-section-container {
-        gap: 0.5rem;
-    }
-}
-
-/* Small phones (360px and up) */
-@media (max-width: 360px) {
-    .main-content {
-        padding: 0.4rem;
-    }
-
-    .dashboard-grid {
-        gap: 0.4rem;
-    }
-
-    .dashboard-left-column,
-    .dashboard-right-column {
-        gap: 0.4rem;
-    }
-
-    .anatomy-section-container {
-        gap: 0.4rem;
-    }
-}
-
-/* Extra small phones (320px and up) */
-@media (max-width: 320px) {
-    .main-content {
-        padding: 0.35rem;
-    }
-
-    .dashboard-grid {
-        gap: 0.35rem;
-    }
-
-    .dashboard-left-column,
-    .dashboard-right-column {
-        gap: 0.35rem;
-    }
-
-    .anatomy-section-container {
-        gap: 0.35rem;
-    }
-
-    /* Force all sections to be full width */
-    .health-status-section,
-    .anatomy-section,
-    .activity-section,
-    .calendar-section,
-    .schedule-section {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 !important;
-        padding: 0.35rem !important;
     }
 }

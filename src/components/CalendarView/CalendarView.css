@@ -204,16 +204,12 @@
 .week-calendar-grid {
   display: grid;
   grid-template-columns: 80px repeat(7, 1fr);
-  /* 1st col for time, then 7 days */
   grid-auto-rows: 48px;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
   align-items: stretch;
 }
 
-.time-col-header {
-  /* Empty top-left cell */
-}
 
 .day-header {
   font-size: 0.95rem;
@@ -500,10 +496,9 @@
   margin: 0 auto;
   display: block;
   box-shadow: 0 1px 4px rgba(60,120,255,0.10);
-  /* transition: background 0.2s, box-shadow 0.2s; */
+ 
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
   .section {
     padding: 0.9rem;
@@ -794,7 +789,6 @@
     font-size: 0.5rem;
   }
 
-  /* Force calendar to be responsive */
   .pill-calendar,
   .pill-row,
   .pill-header {
@@ -811,228 +805,4 @@
     width: 100%;
     min-width: 0;
   }
-}
-
-/* Phone breakpoints */
-/* Large phones (428px and up) */
-@media (max-width: 428px) {
-    .calendar-container {
-        padding: 1rem;
-        border-radius: 1.5rem;
-    }
-
-    .calendar-header {
-        margin-bottom: 1rem;
-    }
-
-    .calendar-title {
-        font-size: 1rem;
-    }
-
-    .calendar-nav {
-        gap: 0.5rem;
-    }
-
-    .nav-button {
-        width: 28px;
-        height: 28px;
-        border-radius: 8px;
-    }
-
-    .nav-button svg {
-        width: 16px;
-        height: 16px;
-    }
-
-    .calendar-grid {
-        gap: 0.5rem;
-    }
-
-    .weekday {
-        font-size: 0.75rem;
-        padding: 0.5rem 0;
-    }
-
-    .day {
-        width: 36px;
-        height: 36px;
-        font-size: 0.85rem;
-        border-radius: 8px;
-    }
-
-    .day.today {
-        font-size: 0.9rem;
-    }
-}
-
-/* Medium phones (390px and up) */
-@media (max-width: 390px) {
-    .calendar-container {
-        padding: 0.75rem;
-        border-radius: 1.2rem;
-    }
-
-    .calendar-header {
-        margin-bottom: 0.75rem;
-    }
-
-    .calendar-title {
-        font-size: 0.9rem;
-    }
-
-    .calendar-nav {
-        gap: 0.35rem;
-    }
-
-    .nav-button {
-        width: 24px;
-        height: 24px;
-        border-radius: 6px;
-    }
-
-    .nav-button svg {
-        width: 14px;
-        height: 14px;
-    }
-
-    .calendar-grid {
-        gap: 0.35rem;
-    }
-
-    .weekday {
-        font-size: 0.7rem;
-        padding: 0.35rem 0;
-    }
-
-    .day {
-        width: 32px;
-        height: 32px;
-        font-size: 0.8rem;
-        border-radius: 6px;
-    }
-
-    .day.today {
-        font-size: 0.85rem;
-    }
-}
-
-/* Small phones (360px and up) */
-@media (max-width: 360px) {
-    .calendar-container {
-        padding: 0.6rem;
-        border-radius: 1rem;
-    }
-
-    .calendar-header {
-        margin-bottom: 0.6rem;
-    }
-
-    .calendar-title {
-        font-size: 0.85rem;
-    }
-
-    .calendar-nav {
-        gap: 0.25rem;
-    }
-
-    .nav-button {
-        width: 22px;
-        height: 22px;
-        border-radius: 5px;
-    }
-
-    .nav-button svg {
-        width: 12px;
-        height: 12px;
-    }
-
-    .calendar-grid {
-        gap: 0.25rem;
-    }
-
-    .weekday {
-        font-size: 0.65rem;
-        padding: 0.25rem 0;
-    }
-
-    .day {
-        width: 28px;
-        height: 28px;
-        font-size: 0.75rem;
-        border-radius: 5px;
-    }
-
-    .day.today {
-        font-size: 0.8rem;
-    }
-}
-
-/* Extra small phones (320px and up) */
-@media (max-width: 320px) {
-    .calendar-container {
-        padding: 0.5rem;
-        border-radius: 0.8rem;
-    }
-
-    .calendar-header {
-        margin-bottom: 0.5rem;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .calendar-title {
-        font-size: 0.8rem;
-        width: 100%;
-    }
-
-    .calendar-nav {
-        gap: 0.2rem;
-        width: 100%;
-        justify-content: space-between;
-    }
-
-    .nav-button {
-        width: 20px;
-        height: 20px;
-        border-radius: 4px;
-    }
-
-    .nav-button svg {
-        width: 10px;
-        height: 10px;
-    }
-
-    .calendar-grid {
-        gap: 0.2rem;
-    }
-
-    .weekday {
-        font-size: 0.6rem;
-        padding: 0.2rem 0;
-    }
-
-    .day {
-        width: 24px;
-        height: 24px;
-        font-size: 0.7rem;
-        border-radius: 4px;
-    }
-
-    .day.today {
-        font-size: 0.75rem;
-    }
-
-    /* Force calendar to be responsive */
-    .calendar-grid {
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-        padding-bottom: 0.5rem;
-    }
-
-    .calendar-grid::-webkit-scrollbar {
-        display: none;
-    }
 } 

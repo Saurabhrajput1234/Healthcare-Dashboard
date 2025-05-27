@@ -44,7 +44,7 @@ function App() {
             </Layout>
           }
         />
-        {/* Add more routes here as needed */}
+      
         <Route path="*" element={<Navigate to="/dashboard" replace />} />
       </Routes>
     </>

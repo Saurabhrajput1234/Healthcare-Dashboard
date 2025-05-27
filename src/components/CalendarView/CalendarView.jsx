@@ -8,7 +8,6 @@ const timeSlots = [
   '08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00'
 ];
 
-// Color coding for appointment types
 const typeColors = {
   checkup: '#3a86ff',
   ophthalmology: '#5f5fff',
@@ -19,15 +18,13 @@ const typeColors = {
   default: '#44419e',
 };
 
-// Helper to get the start of the week (Monday)
 function getStartOfWeek(date) {
   const d = new Date(date);
   const day = d.getDay();
-  const diff = d.getDate() - day + (day === 0 ? -6 : 1); // adjust when day is Sunday
+  const diff = d.getDate() - day + (day === 0 ? -6 : 1);
   return new Date(d.setDate(diff));
 }
 
-// Helper to convert 'HH:MM' to minutes
 function timeToMinutes(t) {
   const [h, m] = t.split(':').map(Number);
   return h * 60 + m;
@@ -38,9 +35,7 @@ const CalendarView = () => {
   const [selected, setSelected] = useState({ dayIdx: null, timeIdx: null });
   const [selectedAppointment, setSelectedAppointment] = useState(null);
 
-  // Get the start of the current week
   const weekStart = getStartOfWeek(currentDate);
-  // Build array of dates for the week
   const weekDates = Array.from({ length: 7 }, (_, i) => {
     const d = new Date(weekStart);
     d.setDate(weekStart.getDate() + i);
@@ -88,7 +83,6 @@ const CalendarView = () => {
     return `${start.toLocaleString('default', { month: 'long' })} ${start.getDate()} - ${end.getDate()}, ${start.getFullYear()}`;
   };
 
-  // Get today's index in the week
   const today = new Date();
   const todayIdx = weekDates.findIndex(d => d.toDateString() === today.toDateString());
 

@@ -1,40 +1,13 @@
 import React from 'react';
-import { FaHeartbeat, FaLungs, FaBone } from 'react-icons/fa';
 import './HealthStatusCards.css';
-
-const healthData = [
-  {
-    id: 1,
-    title: 'Lungs',
-    icon: '🫁',
-    value: 80,
-    color: '#e45757',
-    date: '26 Oct 2021',
-  },
-  {
-    id: 2,
-    title: 'Teeth',
-    icon: '🦷',
-    value: 60,
-    color: '#43aa8b',
-    date: '26 Oct 2021',
-  },
-  {
-    id: 3,
-    title: 'Bone',
-    icon: '🦴',
-    value: 40,
-    color: '#e45757',
-    date: '26 Oct 2021',
-  },
-];
+import { healthData } from '../../data/healthData';
 
 const HealthStatusCards = () => {
   return (
     <div className="section">
       <h2 className="title">Health Status</h2>
       <div className="cards-grid">
-        {healthData.map(card => (
+        {healthData.statusCards.map(card => (
           <div key={card.id} className="card health-status-card">
             <div className="card-header">
               <div className="icon" style={{ fontSize: '2.1rem', background: 'none', color: 'inherit' }}>{card.icon}</div>

@@ -71,7 +71,6 @@
   gap: 0.5rem;
 }
 
-/* Responsive styles */
 @media (max-width: 1024px) {
   .section {
     padding: 0.9rem;

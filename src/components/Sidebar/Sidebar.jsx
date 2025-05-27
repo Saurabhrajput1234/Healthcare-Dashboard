@@ -17,7 +17,7 @@ const Sidebar = () => {
   const settingLink = navLinks.find(link => link.id === 9);
   const SettingIcon = settingLink ? LucideIcons[settingLink.icon] : null;
 
-  // Close sidebar on mobile
+  
   const closeSidebar = () => {
     if (window.innerWidth <= 900 && isSidebarOpen) {
       dispatch(toggleSidebar());

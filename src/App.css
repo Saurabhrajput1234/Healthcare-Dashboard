@@ -56,7 +56,7 @@
   overflow-x: hidden;
 }
 
-/* Responsive styles */
+
 @media (max-width: 1200px) {
   .app-container {
     grid-template-columns: auto 1fr;
